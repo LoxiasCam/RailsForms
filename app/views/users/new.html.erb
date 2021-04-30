@@ -1,3 +1,7 @@
+<%=
+begin
+%>
+
 <!-- <form action="/users" method="post" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <br><br>
@@ -14,7 +18,7 @@
   <%= label_tag(:username, "Username:") %>
   <%= text_field_tag(:username) %><br><br>
   <%= label_tag(:email, "Email:") %>
-  <%= text_field_tag(:email) %><br><br>
+  <%= email_field_tag(:email) %><br><br>
   <%= label_tag(:password, "Password:") %>
   <%= password_field_tag(:password) %><br><br>
   <%= submit_tag "Submit" %>
@@ -24,11 +28,14 @@
   <%= form.label :username, "Username:" %>
   <%= form.text_field :username, :value => 'Please enter your username here'%><br><br>
   <%= form.label :email, "Email:" %>
-  <%= form.text_field :email, :value => 'user@domain.com' %><br><br>
+  <%= form.email_field :email, :value => 'user@domain.com' %><br><br>
   <%= form.label :password, "Password:" %>
   <%= form.password_field :password %><br><br>
   <%= form.submit "Submit" %>
 <% end %>
 <br><br>
 <%= link_to "<< Back to Users List", root_path %><br/> -->
+<%=
+end
+%>
 <%= render "form", user: @user %>

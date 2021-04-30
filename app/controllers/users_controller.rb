@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update(user_params)
       flash.notice = "User '#{@user.username}' edited!"
-      redirect_to new_user_path
+      redirect_to edit_user_path(User.find(params[:id]))
       # redirect_to root_path(@user)
     else
       render :edit
